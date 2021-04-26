@@ -68,3 +68,20 @@ class SimpleSplitStepSolver(SolverBaseClass):
 
         # -- ADVANCE FIELD
         return _lin(FT(_nlin(IFT(uw))))
+    
+   
+class Symmetric_Split_Step_Solver(SolverBaseClass):
+
+    def singleStep(self, uw):
+
+        # -- DECLARE CONVENIENT ABBREVIATIONS
+        dz, w, beta, gamma = self.dz, self.w, self.beta, self.gamma
+        e_fac = np.exp(0.5j * dz * beta)
+
+        # -- LINEAR HALF STEP / FREQUENCY DOMAIN
+        _lin = lambda uw: e_fac * uw
+        # -- NONLINEAR STEP / TIME DOMAIN
+        _nlin = lambda ut: np.exp(1j * gamma * np.abs(ut) ** 2 * dz) * ut
+
+        # -- ADVANCE FIELD
+        return _lin(FT(_nlin(IFT(_lin(uw)))))
