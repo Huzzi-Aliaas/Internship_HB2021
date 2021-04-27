@@ -8,10 +8,12 @@
 ├── gnse
 │   ├── config.py
 │   ├── solver.py
-│   └── tools.py
+│   ├── tools.py
+│   └── version.py
 └── results
     ├── numExp00_NSE
-    │   └── main_NSE_test.py
+    │   ├── main_NSE_test.py
+    │   └── main_NSE_test_SySSM.py
     └── numExp01_event_horizon
 ```
 
@@ -54,11 +56,12 @@ meetings
 * Versioning:
   - PEP 440 - Version identification
 * Documenting software: 
-  - Google-style docstrings
+  - Google-style docstrings, https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
 * Object oriented implementation of z-propagation algorithm
-  - Symmetric split-step Fourier method (we will need that for comparison later)
+  - Symmetric split-step Fourier method (you did that already!)
   - Fourth-order "Runge-Kutta in the interaction picture" (RK4IP) method
   - References: Hult_JLT_2007 (fixed stepsize), Balac_CPC_2013 (adaptive stepsize), Numerical Recipes
+
 
 
 
