@@ -6,7 +6,7 @@
 ```
 ├── README.md
 ├── gnse
-│   ├── conf.py
+│   ├── config.py
 │   ├── solver.py
 │   └── tools.py
 └── results
@@ -18,4 +18,47 @@
 List of folders:
 * gnse: folder containing all our "library" modules. 
 * results: project-specific scripts.
+
+
+## Internship meetings
+
+The subsections below give an outling of the topics discussed in the
+meetings
+
+### Meeting 01 -- 2021-04-16
+
+* Discussed OOP implentation of the pde-solver in stand-alone python script
+
+
+### Meeting 02 -- 2021-04-22
+
+* Review "A quick guide to Organizing Computational Biology Projects"
+* If you need pars of your code in more than one place: refactor! 
+  - organize your code in several independent modules. This then yields a
+    "package"
+  - You can refactor on many levels. You can refactor scripts into modules (as
+    we did today), you can refactor classes, functions, etc.
+* Cohesion: 
+  - Classes have attributes, and classes have methods
+  - "Cohesion" makes a statement of how the method and class are related
+  - A method and its class are coupled with high cohesion, 
+  - The more attribues a given method manipulates (i.e. uses or alters), the
+    higher the cohesion between method and class 
+  - aim: when you refactor a class, try do increase cohesion
+* Documentation:
+  - Clearly document the interface of your classes and functions
+
+
+### Meeting 03 -- 2021-04-27 
+
+* Versioning:
+  - PEP 440 - Version identification
+* Documenting software: 
+  - Google-style docstrings
+* Object oriented implementation of z-propagation algorithm
+  - Symmetric split-step Fourier method (we will need that for comparison later)
+  - Fourth-order "Runge-Kutta in the interaction picture" (RK4IP) method
+  - References: Hult_JLT_2007 (fixed stepsize), Balac_CPC_2013 (adaptive stepsize), Numerical Recipes
+
+
 
