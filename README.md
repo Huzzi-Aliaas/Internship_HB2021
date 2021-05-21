@@ -63,5 +63,19 @@ meetings
   - References: Hult_JLT_2007 (fixed stepsize), Balac_CPC_2013 (adaptive stepsize), Numerical Recipes
 
 
+### Meeting 04 -- 2021-05-14
+
+* Interaction picture method
+  - Discussed the article of Hult and Balac
+
+
+### Meeting 05 -- 2021-05-21
+
+* Research data management recap 
+  - Huzefa visited the RDM course of the Hannover School for Nanotechnology
+
+* Discussion of the RK4IP algorithm
+
+
 
 
