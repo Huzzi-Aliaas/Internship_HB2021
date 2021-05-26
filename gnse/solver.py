@@ -199,4 +199,24 @@ class Symmetric_Split_Step_Solver(SolverBaseClass):
 
         # -- ADVANCE FIELD
         return _lin(FT(_nlin(IFT(_lin(uw)))))
+    
+ 
+
+class Interaction_picture_method(SolverBaseClass):
+
+    def singleStep(self, uw):
+        dz, w, beta, gamma = self.dz, self.w, self.beta, self.gamma
+
+        def dudz(z,uw):
+            ut = IFT(np.exp(1j*beta*z)*uw)
+            return np.exp(-1j * beta * z) * 1j * gamma * FT(np.abs(ut) ** 2 * ut)
+
+        def Runge_Kutta_4(uw):
+            k1 = dudz(0, uw)
+            k2 = dudz(dz / 2, uw + dz * k1 / 2)
+            k3 = dudz(dz / 2, uw + dz * k2 / 2)
+            k4 = dudz(dz, uw + dz * k3)
+            return uw + dz * (k1 + 2 * k2 + 2 * k3 + k4) / 6
+
+        return np.exp(1j * beta * dz) * (Runge_Kutta_4(uw))
 
