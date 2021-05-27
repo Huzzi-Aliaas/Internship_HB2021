@@ -202,21 +202,53 @@ class Symmetric_Split_Step_Solver(SolverBaseClass):
     
  
 
+
 class Interaction_picture_method(SolverBaseClass):
 
+    r"""Fixed step size algorithm implementing the Runge-Kutta 4th
+    order method.
+
+    Implements a fixed step size algorithm referred to as the Interaction picture
+    method as discussed in [1].
+
+    References:
+        [1] Johan Hult,
+        A Fourth-Order Runge–Kutta in the Interaction Picture Method for Simulating
+        Supercontinuum Generation in Optical Fibers,
+        JOURNAL OF LIGHTWAVE TECHNOLOGY, VOL. 25, NO. 12, DECEMBER 2007,
+    """
+
     def singleStep(self, uw):
+        r"""Advance field by a single :math:`z`-slice
+        
+        Implements Runge Kutta fourth order method for solving Nonlinear 
+        SchrÖdinger Equation.
+
+        Args:
+            uw (:obj:`numpy.ndarray`): Frequency domain representation of the
+            field at the current :math:`z`-position.
+
+        Returns:
+            :obj:`numpy.ndarray`: Frequency domain representation of the field
+            at :math:`z` + :math:`dz`.
+        """
+
+        # -- DECLARE CONVENIENT ABBREVIATIONS
         dz, w, beta, gamma = self.dz, self.w, self.beta, self.gamma
 
         def dudz(z,uw):
+            r"""Derivative of Electric field envelope 'u' in frequency domain
+            with respect to :math 'z'
+            """
             ut = IFT(np.exp(1j*beta*z)*uw)
             return np.exp(-1j * beta * z) * 1j * gamma * FT(np.abs(ut) ** 2 * ut)
 
         def Runge_Kutta_4(uw):
-            k1 = dudz(0, uw)
+            r"""Implements Runge Kutta 4th order formula"""
+            k1 = dudz(dz, uw)
             k2 = dudz(dz / 2, uw + dz * k1 / 2)
             k3 = dudz(dz / 2, uw + dz * k2 / 2)
             k4 = dudz(dz, uw + dz * k3)
             return uw + dz * (k1 + 2 * k2 + 2 * k3 + k4) / 6
 
         return np.exp(1j * beta * dz) * (Runge_Kutta_4(uw))
-
