@@ -245,7 +245,7 @@ class Interaction_picture_method(SolverBaseClass):
 
         def Runge_Kutta_4(uw):
             r"""Implements Runge Kutta 4th order formula"""
-            k1 = dudz(dz, uw)
+            k1 = dudz(0, uw)
             k2 = dudz(dz / 2, uw + dz * k1 / 2)
             k3 = dudz(dz / 2, uw + dz * k2 / 2)
             k4 = dudz(dz, uw + dz * k3)
