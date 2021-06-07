@@ -31,7 +31,7 @@ def plot_details_prop_const(w, beta1, beta2, oName=None):
     ax1.ticklabel_format(useOffset=False, style="plain")
     ax1.tick_params(axis="y", length=2.0)
     ax1.tick_params(axis="x", length=2.0, labelbottom=False)
-    ax1.set_ylabel(r"GD $\beta_1~\mathrm{(\mu m/fs)}$")
+    ax1.set_ylabel(r"GD $\beta_1~\mathrm{(fs/\mu m)}$")
 
     l2 = ax2.plot(w, beta2, color="k", linewidth=1)
     ax2.axhline(0, color="k", lw=0.75, ls=":")
