@@ -8,6 +8,11 @@ DATE: 2021-04-22
 
 CHANGELOG:
 
+Mo  7 Jun 2021 16:14:12 CEST
+----------------------------
+* Huzefa included integrating factor solver (merged from
+                        "InteractionPictureMethod" branch) -- OM
+
 Do 22 Apr 2021 16:28:14 CEST
 ----------------------------
 * refactored from project specific script -- OM
@@ -199,8 +204,6 @@ class Symmetric_Split_Step_Solver(SolverBaseClass):
 
         # -- ADVANCE FIELD
         return _lin(FT(_nlin(IFT(_lin(uw)))))
-    
- 
 
 
 class Interaction_picture_method(SolverBaseClass):
@@ -220,8 +223,8 @@ class Interaction_picture_method(SolverBaseClass):
 
     def singleStep(self, uw):
         r"""Advance field by a single :math:`z`-slice
-        
-        Implements Runge Kutta fourth order method for solving Nonlinear 
+
+        Implements Runge Kutta fourth order method for solving Nonlinear
         SchrÖdinger Equation.
 
         Args:
@@ -236,11 +239,11 @@ class Interaction_picture_method(SolverBaseClass):
         # -- DECLARE CONVENIENT ABBREVIATIONS
         dz, w, beta, gamma = self.dz, self.w, self.beta, self.gamma
 
-        def dudz(z,uw):
+        def dudz(z, uw):
             r"""Derivative of Electric field envelope 'u' in frequency domain
             with respect to :math 'z'
             """
-            ut = IFT(np.exp(1j*beta*z)*uw)
+            ut = IFT(np.exp(1j * beta * z) * uw)
             return np.exp(-1j * beta * z) * 1j * gamma * FT(np.abs(ut) ** 2 * ut)
 
         def Runge_Kutta_4(uw):

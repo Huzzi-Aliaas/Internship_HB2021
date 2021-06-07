@@ -2,10 +2,14 @@
 Clarifies versioning for the project.
 
 """
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 """
 CHANGELOG:
+
+0.1.2 (Mo  7 Jun 2021 16:14:12 CEST)
+------------------------------------
+* Merged "master" with "InteractionPictureMethod" brach of Huzefa  -- OM
 
 0.1.1 (Di 27 Apr 2021 17:43:30 CEST)
 ------------------------------------
