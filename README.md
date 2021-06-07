@@ -6,11 +6,6 @@
 ```
 ├── README.md
 ├── gnse
-│   ├── __pycache__
-│   │   ├── config.cpython-39.pyc
-│   │   ├── propagation_constant.cpython-39.pyc
-│   │   ├── solver.cpython-39.pyc
-│   │   └── tools.cpython-39.pyc
 │   ├── config.py
 │   ├── propagation_constant.py
 │   ├── solver.py
