@@ -7,6 +7,47 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as col
 from .config import FTFREQ, FT, IFT, SHIFT
 
+def plot_details_prop_const(w, beta1, beta2, oName=None):
+    """Generate a figure of the group-delay and group-velocity dispersion.
+
+    Generates a plot showing the grop-delay (top subplot) and group-velocity
+    dispersion (bottom subplot).
+
+    Args:
+        w (:obj:`numpy.ndarray`):
+            Angular frequency grid.
+        beta1 (:obj:`numpy.ndarray`):
+            Group-delay profile.
+        beta2 (:obj:`numpy.ndarray`):
+            Group-velocity dispersion profile.
+    """
+
+    f, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(5, 4))
+    plt.subplots_adjust(left=0.18, right=0.98, bottom=0.12, top=0.96, hspace=0.1)
+
+    l1 = ax1.plot(w, beta1, color="k", linewidth=1)
+
+    ax1.set_xlim(np.min(w), np.max(w))
+    ax1.ticklabel_format(useOffset=False, style="plain")
+    ax1.tick_params(axis="y", length=2.0)
+    ax1.tick_params(axis="x", length=2.0, labelbottom=False)
+    ax1.set_ylabel(r"GD $\beta_1~\mathrm{(\mu m/fs)}$")
+
+    l2 = ax2.plot(w, beta2, color="k", linewidth=1)
+    ax2.axhline(0, color="k", lw=0.75, ls=":")
+
+    ax2.set_xlim(np.min(w), np.max(w))
+    ax2.ticklabel_format(useOffset=False, style="plain")
+    ax2.tick_params(axis="y", length=2.0)
+    ax2.tick_params(axis="x", length=2.0)
+    ax2.set_ylabel(r"GVD $\beta_2~\mathrm{(fs^2/\mu m)}$")
+    ax2.set_xlabel(r"Angular frequency $\omega~\mathrm{(rad/fs)}$")
+
+    if oName:
+        plt.savefig(oName + ".png", format="png", dpi=600)
+    else:
+        plt.show()
+
 
 def plot_evolution(z, t, u, tLim=None, wLim=None, oName=None):
     def _setColorbar(im, refPos):
