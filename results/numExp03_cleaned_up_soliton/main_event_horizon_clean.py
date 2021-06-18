@@ -78,6 +78,17 @@ def main():
     #for i in range(t.size):
     #  print(t[i], It[i])
     #exit()
+
+    # -- SAVE DATA
+    results = {
+        "t": my_solver.t,
+        "w": my_solver.w,
+        "z": my_solver.z,
+        "utz": my_solver.utz,
+    }
+    np.savez_compressed('res_S_DW_collision', **results)
+
+
     # -- SHOW RESULTS
     oName = 'res_cleaned_up_t0_%lf_w0_%lf_t1_%lf_w1_%lf_tsep_%lf_sfac_%lf'%(t0,w0,t1,w1,t_sep,s_fac)
     plot_evolution(
