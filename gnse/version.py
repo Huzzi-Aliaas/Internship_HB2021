@@ -2,10 +2,14 @@
 Clarifies versioning for the project.
 
 """
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 
 """
 CHANGELOG:
+
+0.1,3 (Fr 18 Jun 2021 14:51:04 CEST)
+------------------------------------
+* Added module spectrogram.py -- OM
 
 0.1.2 (Mo  7 Jun 2021 16:14:12 CEST)
 ------------------------------------
