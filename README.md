@@ -29,11 +29,22 @@
     │   ├── main_event_horizon_clean.py
     │   ├── res_S_DW_collision.npz
     │   └── res_cleaned_up_t0_0.500000_w0_0.000000_t1_4.000000_w1_18.000000_tsep_30.000000_sfac_0.050000.png
-    └── numExp04_spectrogram
-        ├── figs
-        ├── generate_animation.sh
-        ├── main_spectrogram.py
-        └── spec.gif
+    ├── numExp04_spectrogram
+    │   ├── figs
+    │   ├── generate_animation.sh
+    │   ├── main_spectrogram.py
+    │   └── spec.gif
+    ├── numExp05_energy_conservation
+    │   ├── main_event_horizon_clean.py
+    │   ├── res_S_DW_collision.npz
+    │   ├── res_cleaned_up_t0_0.500000_w0_0.000000_t1_4.000000_w1_19.500000_tsep_30.000000_sfac_0.200000.png
+    │   └── test.dat
+    └── numExp06_supercontinuum_generation
+        ├── fig_SC_generation.png
+        ├── main_sc_generation.py
+        ├── pp_spectrogram
+        └── res_SC_generation.npz
+
 ```
 
 List of folders:
@@ -44,6 +55,8 @@ List of folders:
   - numExp02: demonstration of an optical event horizon 
   - numExp03: demonstration of how to get a "cleaned up" a soliton + DW initial condition
   - numExp04: demonstration of how to compute spectrograms
+  - numExp05: demonstration of energy conservation (NSE) for each pulse 
+  - numExp06: demonstration that supercontinuum generation gives conditions for an optical event horizon
 
 
 ## Internship meetings
