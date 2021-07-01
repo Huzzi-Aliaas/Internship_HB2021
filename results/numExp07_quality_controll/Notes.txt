@@ -1,0 +1,6 @@
+- Prepare a plot that shows how the RK4-IP performs relative to the SySSM and SiSSM.
+
+- Use a fundamental soliton and propagate it of one soliton period.
+- Assess the endpoint error (global) error for all three algorithms.
+- Plot the endpoint errors using a log-log plot (x-axis: stepsize, y-axis: endpoint error).
+
