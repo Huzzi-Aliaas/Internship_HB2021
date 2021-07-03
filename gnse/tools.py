@@ -127,10 +127,11 @@ def figure_1b(res,oName=None):
 
     Generates a loglog-plot showing the scaling behavior of the
     root-mean-square error at given z-stepsize for the
-    simple and symmetric operator splitting schemes.
+    simple, symmetric operator splitting schemes and interaction
+    picture method.
 
     Args:
-        res (array): results of the simulation run in main_b of ex04 part 1
+        res (array): results of the simulation run in Quality_control.py
         oName (str): name of output figure (optional, default: None)
     """
 
