@@ -119,3 +119,35 @@ def plot_evolution(z, t, u, tLim=None, wLim=None, oName=None):
         plt.savefig(oName + ".png", format="png", dpi=600)
     else:
         plt.show()
+        
+       
+    
+def figure_1b(res,oName=None):
+    """Plot RMS error of splitting schemes
+
+    Generates a loglog-plot showing the scaling behavior of the
+    root-mean-square error at given z-stepsize for the
+    simple and symmetric operator splitting schemes.
+
+    Args:
+        res (array): results of the simulation run in main_b of ex04 part 1
+        oName (str): name of output figure (optional, default: None)
+    """
+
+    dz, RMSError_1, RMSError_2, RMSError_3 = zip(*res)
+
+    f, ax = plt.subplots()
+    ax.plot(dz, RMSError_1, r"o-", label=r"simple splitting")
+    ax.plot(dz, RMSError_2, r"^-", label=r"symmetric splitting")
+    ax.plot(dz, RMSError_3, r"^-", label=r"Interaction picture method")
+    ax.set(xlabel=r"stepsize $dz$",ylabel=r"RMS error")
+    ax.set_xscale("log")
+    ax.set_yscale("log")
+    ax.grid(True, which='both', ls='-', color='0.65')
+    ax.legend()
+
+    if oName:
+        plt.savefig(oName,format='png',dpi=600)
+    else:
+        plt.show()
+    
