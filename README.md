@@ -12,6 +12,8 @@ TBW
 
 ## Availability of the software
 
+TBW
+
 ##  Structure of the software repository
 
 ```
@@ -196,7 +198,7 @@ meetings
 
 ## License
 
-This project is licensed unter the MIT License -- see the LICENSE.md file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 
 ## Acknowledgements
