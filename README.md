@@ -1,7 +1,18 @@
 # py-gnse
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-##  Current structure of the package
+Brief description of what the provided code does
+
+![alt text](https://github.com/omelchert/Internship_HB2021/blob/main/results/numExp05_energy_conservation/res_cleaned_up_t0_0.500000_w0_0.000000_t1_4.000000_w1_19.500000_tsep_30.000000_sfac_0.200000.png)
+
+## Prerequisites
+
+TBW
+
+## Availability of the software
+
+##  Structure of the software repository
 
 ```
 .
@@ -39,11 +50,14 @@
     │   ├── res_S_DW_collision.npz
     │   ├── res_cleaned_up_t0_0.500000_w0_0.000000_t1_4.000000_w1_19.500000_tsep_30.000000_sfac_0.200000.png
     │   └── test.dat
-    └── numExp06_supercontinuum_generation
-        ├── fig_SC_generation.png
-        ├── main_sc_generation.py
-        ├── pp_spectrogram
-        └── res_SC_generation.npz
+    ├── numExp06_supercontinuum_generation
+    │   ├── fig_SC_generation.png
+    │   ├── main_sc_generation.py
+    │   ├── pp_spectrogram
+    │   └── res_SC_generation.npz
+    └── numExp07_quality_controll
+        ├── Quality_control.png
+        └── Quality_control.py
 
 ```
 
@@ -57,18 +71,16 @@ List of folders:
   - numExp04: demonstration of how to compute spectrograms
   - numExp05: demonstration of energy conservation (NSE) for each pulse 
   - numExp06: demonstration that supercontinuum generation gives conditions for an optical event horizon
-
+  - numExp07: demonstration of the scaling behavior of the global error for decreasing stepsize for the implemented algorithms
 
 ## Internship meetings
 
 The subsections below give an outling of the topics discussed in the
 meetings
 
-
 ### Meeting 01 -- 2021-04-16
 
 * Discussed OOP implentation of the pde-solver in stand-alone python script
-
 
 ### Meeting 02 -- 2021-04-22
 
@@ -122,7 +134,7 @@ meetings
   - Considered b2=-1 and b3=0.1 and determined parameters of a soliton and 
     a group-velocity matched dispersive wave as basis for a numerical 
     simulation study of an optical event horizon
-  - see folder numExp01
+  - See folder numExp01
 
 * Optical event horizon propagation scenario
   - We set up a preliminary propagation scenario using a soliton and a 
@@ -130,7 +142,7 @@ meetings
     an optical event horizon.
   - Needs to be optimized so that computational grid is adequate and 
     total reflection is supported.
-  - see folder numExp02
+  - See folder numExp02
 
 
 ### Meeting 07 -- 2021-06-15
@@ -140,7 +152,7 @@ meetings
     propagate until the soliton sheds off its radiative dress and filter out
     the localized state. We use this localized state to represent a "cleaned
     up" soliton in subsequently designed initial conditions.
-  - see folder numExp03
+  - See folder numExp03
 
 
 ### Meeting 08 -- 2021-06-18
@@ -149,6 +161,44 @@ meetings
   - We discussed spectograms as Fourier transforms of localized signals
   - We used the "convert" tool of the imagemagick library to assemble
     many png-files into an animated gif
-  - see folder numExp04
+  - See folder numExp04
 
 
+### Meeting 09 -- 2021-06-28
+
+* Talk rehearsal where we discussed "optical event horizon" simulations
+  - We verified that the energies of both pulses are conserved when considering 
+    the NSE for modeling
+  - See folder numExp5
+
+
+### Meeting 10 -- 2021-07-01
+
+* Discussed supercontinuum example
+  - We had a look at a supercontinuum generation scenario to demonstrate
+    that the conditions for an optical event horizon are realized during 
+    supercontinuum generation
+  - See folder numExp06
+
+* Quality controll
+  - Final task for Huzefa was to prepare a plot, showing how the global error
+    of the three different z-propagation algorithms scales for decreasing
+    stepsize
+  - See folder numExp07
+
+
+### Meeting 11 -- 2021-07-05
+
+* Wrap up of the internship work
+  - We discussed how to amend this README file in order to better document the 
+    project folder
+
+
+## License
+
+This project is licensed unter the MIT License -- see the LICENSE.md file for details.
+
+
+## Acknowledgements
+
+TBW
