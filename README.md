@@ -8,11 +8,14 @@ Brief description of what the provided code does
 
 ## Prerequisites
 
-TBW
+The scripts in the ```internship_HB2021``` repository requires a working ```Python3``` environement with the functionality of ```numpy, scipy``` and ```matplotlib```. 
 
 ## Availability of the software
 
-TBW
+The repository can be clone by running the following in the command line: 
+
+```$ git clone https://github.com/omelchert/Internship_HB2021.git```
+
 
 ##  Structure of the software repository
 
