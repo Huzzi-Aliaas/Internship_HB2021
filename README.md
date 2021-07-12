@@ -203,4 +203,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgements
 
-TBW
+Throughout my internship I have received a great deal of support and assistance.I would first like to thank my supervisor, Dr. Oliver Melchert, whose expertise was invaluable in formulating the questions and methodology. His insightful feedback pushed me to sharpen my thinking and brought my work to a higher level. I would like to acknowledge Prof. Dr. Ayhan Demircan for his constant support and for all of the opportunities I was given to further my skills.
