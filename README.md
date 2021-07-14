@@ -19,7 +19,7 @@
 
 ![alt text](https://github.com/omelchert/Internship_HB2021/blob/main/results/numExp04_spectrogram/spec.gif)
 
-5. The python script ```main_sc_generation.py``` depicts an optical event horizon in supercontinuum generation. When a higher order soliton propagates inside a 
+5. The python script ```main_sc_generation.py``` depicts an optical event horizon in supercontinuum generation.        
 
 ![alt text](https://github.com/omelchert/Internship_HB2021/blob/main/results/numExp06_supercontinuum_generation/fig_SC_generation.png)
 
