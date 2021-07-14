@@ -11,13 +11,17 @@
 ![alt text](https://github.com/omelchert/Internship_HB2021/blob/main/results/numExp05_energy_conservation/res_cleaned_up_t0_0.500000_w0_0.000000_t1_4.000000_w1_19.500000_tsep_30.000000_sfac_0.200000.png)
 
 
-3. The preliminary condition to depict an event horizon in an optical fiber is that the soliton and the dispersive wave should lie in anomalous and normal dispersion regime respectively. The python script ```main_analyze_prop_const.py```  shows the group velocity matching frequency in anomalous and normal dispersion regime. The figure below shows the group velociy matching frequency when ```\beta_2 = -1 fs^2 / m``` and ```\beta_3 = 0.1 fs^3 / m```.
+3. The preliminary condition to depict an event horizon in an optical fiber is that the soliton and the dispersive wave should lie in anomalous and normal dispersion regime respectively. The python script ```main_analyze_prop_const.py```  shows the group velocity matching frequency in anomalous and normal dispersion regime. The figure below shows the group velociy matching frequency when ```\beta_2 = -1 fs^2 / μm``` and ```\beta_3 = 0.1 fs^3 / μm```.
 
 ![alt text](https://github.com/omelchert/Internship_HB2021/blob/main/results/numExp01_analyze_beta/plot_beta2_-1.000000_beta3_0.100000.png)
 
-Brief description of what the provided code does
+4. The python script ```main_spectrogram.py``` is a tool for plotting spectrogram which intuitively displays the complex field envelope instantaneous frequency vs. time. The technoique used to generate spectrogram is called Frequency Resolved Optical Gating (FROG) in which a gate function gates out a piece of the complex field envelope and the spectrum of that piece is measured. The gate is then scanned through the waveform and the process is repeated for all values of the gate position. The gif shown below is a spectrogram of a white hole event horizon.
 
+![alt text](https://github.com/omelchert/Internship_HB2021/blob/main/results/numExp04_spectrogram/spec.gif)
 
+5. The python script ```main_sc_generation.py``` depicts an optical event horizon in supercontinuum generation. 
+
+![alt text](https://github.com/omelchert/Internship_HB2021/blob/main/results/numExp06_supercontinuum_generation/fig_SC_generation.png)
 
 ## Prerequisites
 
