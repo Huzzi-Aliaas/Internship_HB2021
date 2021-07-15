@@ -198,7 +198,7 @@ class Symmetric_Split_Step_Solver(SolverBaseClass):
         e_fac = np.exp(0.5j * dz * beta)
 
         # -- LINEAR HALF STEP / FREQUENCY DOMAIN
-        _lin = lambda uw: e_fac * uw
+        _linhalf = lambda uw: e_fac * uw
         # -- NONLINEAR STEP / TIME DOMAIN
         _nlin = lambda ut: np.exp(1j * gamma * np.abs(ut) ** 2 * dz) * ut
 
